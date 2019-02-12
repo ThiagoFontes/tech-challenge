@@ -1,3 +1,11 @@
+# What have been done
+<!-- [![Hex version badge](https://img.shields.io/hexpm/v/repo_example.svg)](https://hex.pm/packages/repo_example) -->
+<!-- [![License badge](https://img.shields.io/hexpm/l/repo_example.svg)](https://github.com/surgeventures/repo-example-elixir/blob/master/LICENSE.md) -->
+[![Build status badge](https://img.shields.io/circleci/project/github/surgeventures/repo-example-elixir/master.svg)](https://github.com/ThiagoFontes/tech-challenge/tree/master)
+[![Code coverage badge](https://img.shields.io/codecov/c/github/surgeventures/repo-example-elixir/master.svg)](https://github.com/ThiagoFontes/tech-challenge/branch/master)
+
+As my first step I'm learning how to configure CI, and documentation to the project
+
 # Tech Challenge 
 
 Bem vindo(a)! Esse é o Tech Challenge Elixir!
@@ -95,3 +103,6 @@ O desafio será avaliado através de cinco critérios.
 * [Elixir School - Lições sobre a linguagem de programação Elixir](https://elixirschool.com/pt/)
 * [O Guia de Estilo Elixir](https://github.com/gusaiani/elixir_style_guide/blob/master/README_ptBR.md)
 * [Boas Práticas na Stone](https://github.com/stone-payments/stoneco-best-practices/blob/master/README_pt.md)
+
+### Extra Material used
+* [Configuring the project](https://medium.com/shedul-tech-blog/ultimate-guide-to-preparing-and-releasing-elixir-open-source-package-like-a-pro-d64a0f86d012)
