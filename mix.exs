@@ -18,7 +18,21 @@ defmodule FinancialSystem.Mixfile do
         "coveralls.detail": :test,
         "coveralls.post": :test,
         "coveralls.html": :test
-      ]
+      ],
+      elixirc_paths: elixirc_paths(Mix.env()),
+      aliases: aliases()
+    ]
+  end
+
+  # https://elixirforum.com/t/how-to-set-up-the-testing-environment-for-a-library-that-uses-ecto/4770/3
+  # Ensures `test/support/*.ex` files are read during tests
+  def elixirc_paths(:test), do: ["lib", "test/support"]
+  def elixirc_paths(_), do: ["lib"]
+
+  defp aliases do
+    [
+      # Ensures database is reset before tests are run
+      test: ["ecto.create --quiet", "test"]
     ]
   end
 

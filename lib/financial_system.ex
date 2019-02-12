@@ -3,7 +3,7 @@ defmodule FinancialSystem.Application do
   Documentation for FinancialSystem.
   """
   use Application
-  
+
   # Database supervisor 
   def start(_type, _args) do
     children = [

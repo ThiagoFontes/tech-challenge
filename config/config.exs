@@ -2,19 +2,13 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-config :financial_system, FinancialSystem.Repo,
-  database: "financial_system_repo",
-  username: "user_post",
-  password: "pass",
-  hostname: "localhost"
+#config :financial_system, FinancialSystem.Repo,
+#   database: "financial_system_repo",
+#   username: "user_post",
+#   password: "pass",
+#   hostname: "localhost"
 
-config :financial_system, ecto_repos: [FinancialSystem.Repo]
-
-# Formating our tests
-if Mix.env == :test do
-    config :junit_formatter,
-     report_dir: "/tmp/repo-example-test-results/exunit"
-end
+# config :financial_system, ecto_repos: [FinancialSystem.Repo]
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
@@ -41,4 +35,4 @@ end
 # Configuration from the imported file will override the ones defined
 # here (which is why it is important to import them last).
 #
-#     import_config "#{Mix.env}.exs"
+import_config "#{Mix.env}.exs"

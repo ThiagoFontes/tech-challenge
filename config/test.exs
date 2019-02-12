@@ -1,16 +1,22 @@
 use Mix.Config
 
-config :my_app, MyApp.Repo,
+# Repos known to Ecto:
+config :financial_system, ecto_repos: [Test.Repo]
+
+# Test Repo settings
+config :financial_system, Test.Repo,
+  adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "myapp_test",
+  database: "myproject_test",
   hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox # Enabling sandbox mode
-
-config :financial_system, ecto_repos: [FinancialSystem.Repo]
+  poolsize: 10,
+  # Ensure async testing is possible:
+  pool: Ecto.Adapters.SQL.Sandbox
 
 # Formating our tests
 if Mix.env == :test do
     config :junit_formatter,
      report_dir: "/tmp/repo-example-test-results/exunit"
 end
+

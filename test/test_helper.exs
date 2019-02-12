@@ -1,33 +1,22 @@
 File.mkdir_p(Path.dirname(JUnitFormatter.get_report_file_path()))
 ExUnit.configure(formatters: [JUnitFormatter, ExUnit.CLIFormatter])
 
-Ecto.Adapters.SQL.Sandbox.mode(FinancialSystem.Repo, :manual)
-
 ExUnit.start()
 
-# Extending ExUnit to test PSQL
-defmodule FinancialSystem.RepoCase do
-    use ExUnit.CaseTemplate
-  
-    using do
-      quote do
-        alias MyApp.Repo
-  
-        import Ecto
-        import Ecto.Query
-        import FinancialSystem.RepoCase
-        
-        # and any other stuff
-      end
-    end
-  
-    setup tags do
-      :ok = Ecto.Adapters.SQL.Sandbox.checkout(FinancialSystem.Repo)
-      
-      unless tags[:async] do
-        Ecto.Adapters.SQL.Sandbox.mode(FinancialSystem.Repo, {:shared, self()})
-      end
-      
-      :ok
-    end
+{:ok, _pid} = Test.Repo.start_link()
+Ecto.Adapters.SQL.Sandbox.mode(Test.Repo, :manual)
+
+defmodule PostTest do
+  # Once the mode is manual, tests can also be async
+  use ExUnit.Case, async: true
+
+  setup do
+    # Explicitly get a connection before each test
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Test.Repo)
   end
+
+  test "create post" do
+    # Use the repository as usual
+    # assert %Post{} = Test.Repo.insert!(%Post{})
+  end
+end
