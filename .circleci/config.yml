@@ -13,7 +13,6 @@ jobs:
       - run: HEX_MIRROR=https://cdn.jsdelivr.net/hex mix local.rebar --force
       - run: HEX_MIRROR=https://cdn.jsdelivr.net/hex mix deps.get
       - run: mix compile --warnings-as-errors --force
-      - run: mix ecto.create
       - run: mix test
       - store_test_results:
           path: /tmp/repo-example-test-results
