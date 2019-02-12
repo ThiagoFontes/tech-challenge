@@ -2,6 +2,15 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
+config :financial_system, FinancialSystem.Repo,
+  database: "financial_system_repo",
+  username: "user_post",
+  password: "pass",
+  hostname: "localhost"
+
+config :financial_system, ecto_repos: [FinancialSystem.Repo]
+
+# Formating our tests
 if Mix.env == :test do
     config :junit_formatter,
      report_dir: "/tmp/repo-example-test-results/exunit"

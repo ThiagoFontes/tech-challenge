@@ -109,3 +109,9 @@ O desafio será avaliado através de cinco critérios.
 
 ### Extra Material used
 * [Configuring the project](https://medium.com/shedul-tech-blog/ultimate-guide-to-preparing-and-releasing-elixir-open-source-package-like-a-pro-d64a0f86d012)
+
+#### Documentation
+
+- https://hexdocs.pm/ecto/Ecto.html
+- https://hexdocs.pm/ecto/getting-started.html
+- https://hexdocs.pm/ecto/testing-with-ecto.html

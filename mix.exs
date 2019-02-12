@@ -5,7 +5,7 @@ defmodule FinancialSystem.Mixfile do
     [
       app: :financial_system,
       version: "0.1.1",
-      elixir: "~> 1.8.0",
+      elixir: ">= 1.8.0",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       docs: [
@@ -41,7 +41,11 @@ defmodule FinancialSystem.Mixfile do
       # Code linting check
       {:credo, "~> 1.0"},
       # Test covering tests
-      {:excoveralls, "~> 0.10.5"}
+      {:excoveralls, "~> 0.10.5"},
+      # PostgreSQL database
+      {:ecto, "~> 3.0"},
+      {:ecto_sql, "~> 3.0"},
+      {:postgrex, "~> 0.14.1"}
     ]
   end
 end
