@@ -4,7 +4,7 @@ defmodule FinancialSystem.Application do
   """
   use Application
 
-  # Database supervisor 
+  # Database supervisor
   def start(_type, _args) do
     children = [
       FinancialSystem.Repo
