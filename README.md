@@ -2,10 +2,7 @@
 <!-- [![Hex version badge](https://img.shields.io/hexpm/v/repo_example.svg)](https://hex.pm/packages/repo_example) -->
 <!-- [![License badge](https://img.shields.io/hexpm/l/repo_example.svg)](https://github.com/surgeventures/repo-example-elixir/blob/master/LICENSE.md) -->
 [![Build status badge](https://img.shields.io/circleci/project/github/ThiagoFontes/tech-challenge.svg?style=popout-square)](https://github.com/ThiagoFontes/tech-challenge/tree/master)
-
 [![Code coverage badge](https://img.shields.io/codecov/c/github/ThiagoFontes/tech-challenge.svg?style=popout-square)](https://github.com/ThiagoFontes/tech-challenge/branch/master)
-
-[![codecov](https://codecov.io/gh/ThiagoFontes/tech-challenge/branch/master/graph/badge.svg)](https://codecov.io/gh/ThiagoFontes/tech-challenge)
 
 As my first step I'm learning how to configure CI, and documentation to the project
 
